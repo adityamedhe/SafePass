@@ -1,0 +1,113 @@
+
+<!doctype HTML>
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Roboto:300,400' rel='stylesheet' type='text/css'>
+<title>SafePass</title>
+<script src="lib/jquery.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/forms.js"></script>
+
+<link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="styles/commonui.css">
+
+
+</head>
+
+<body>
+<script>
+	var delay=800;
+	$(window).load(function(){        
+		$("#logo").animate({opacity:1},delay+200);
+		$("#logo").animate({opacity:1},delay);
+		$("#logo").animate({marginTop:"0px"},800,function(){
+					$("#login").animate({opacity:1},delay);
+		});
+	});
+</script>
+
+<div id="content" class="tstyle2">
+	<div id="logo">
+	<img src="img/logo.png" width="500">
+	</div>
+
+
+	<div id="login">
+
+		<div id="loginhead">
+			<span class="tstyle1">Login</span>
+		</div>
+
+		<div id="logincont">
+			<div id="userlogin">
+				<p class="tstyle1">SafePass users login</p>	
+				<input type="text" id="uid" class="tstyle2" placeholder="Username">
+				<button class="posbutton" id="ulogin" onclick="user_validate();">Login</button><br><br><br>
+				Don't have an account yet?<br>
+				<button class="posbutton" onclick="location.href='modules/registerUser/enterDetails.php'">Create Account</button>
+			</div>
+
+			<div id="apilogin">
+				<p class="tstyle1">SafePass API client login</p>
+				<input type="text" id="aid" class="tstyle2" placeholder="Username">
+				<button class="posbutton" id="alogin" onclick="api_validate();">Login</button><br><br>
+				Interested in using SafePass on your website to <br>provide a next-generation login to your users?<br>
+				<button class="posbutton" onclick="location.href='modules/registerAPIclient/enterDetails.php'">Create Account</button>
+			</div>
+		</div>
+
+		<div id="loginfooter">
+			<p class="tstyle2">Made by students of MIT, Pune</p>
+		</div>
+	</div>	
+</div>
+
+<div id="notification" class="tstyle2">
+</div>
+    
+<div id="working">
+   <span class="tstyle2">Working...</span>    
+</div>
+<script>
+function user_validate()
+{
+	var uid = $("#uid").val();
+	$.post("modules/login/userLoginCheck.php",{"uid":uid},function(data){
+		if(data == 'P')
+		{
+			window.location="modules/login/getPicPassword.php?utype=U&id="+uid;
+		}
+		else if(data == 'M')
+		{
+			window.location="modules/login/getMapPassword.php?utype=U&id="+uid;
+		}
+		else
+		{
+			showNotif(data,function(){});
+		}
+	});
+}
+
+function api_validate()
+{
+	var aid = $("#aid").val();
+	$.post("modules/login/APIloginCheck.php",{"aid":aid},function(data){
+		if(data == 'P')
+		{
+			window.location="modules/login/getPicPassword.php?utype=A&id="+aid;
+		}
+		else if(data == 'M')
+		{
+			window.location="modules/login/APIgetMapPassword.php?&id="+aid;
+		}
+		else
+		{
+			showNotif(data,function(){});
+		}
+	});
+}
+</script>
+</body>
+
+</html>
+

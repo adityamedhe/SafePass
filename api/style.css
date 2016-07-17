@@ -1,0 +1,17 @@
+.sfbut
+{
+	position: relative;
+	border-radius: 5px;
+	height: 50px;
+	width: 325px;
+	background-image: url('http://localhost/safepass/api/button.png');
+}
+.sfbut:hover
+{
+	border:1px #c8c8c8 solid;
+}
+.sfbut:active
+{
+	box-shadow: 1px 1px 1px black;
+	//border:1px #c8c8c8 dashed;
+}

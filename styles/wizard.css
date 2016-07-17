@@ -1,0 +1,60 @@
+body
+{
+	//background-color: #ebebeb;
+	background-image: url('../img/graysimplelight.jpg');
+	background-repeat: repeat;
+	text-align: center;
+}
+
+
+
+#content
+{
+	
+	text-align: justify;
+	overflow: hidden;
+	border:1px #c8c8c8 solid;
+	border-radius: 5px;
+	border-top:5px #72b8dc solid;
+	background-color: white;
+	width:90%;
+	margin:20px auto 0px auto;
+	
+}
+
+#usercard
+{
+	background-image: url('../img/graystripe.png');
+	padding: 10px;
+	position: fixed;
+	right:10px;
+	top:0px;
+	width:150px;
+	background-color: white;
+	border:1px #c8c8c8 solid;
+	border-top:5px #72b8dc solid;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius:5px;
+}
+
+#usercircle
+{	
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	box-shadow: 1px 1px 1px;
+	border-radius: 50%;
+	border: 2px white solid;
+
+	float:left;
+	height:50px;
+	width:50px;
+	margin:auto;
+	background-color: #c8c8c8;
+	
+	overflow: hidden;
+	background-size:cover; 
+	background-repeat:no-repeat;	
+}
+
+

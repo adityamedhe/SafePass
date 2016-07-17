@@ -1,0 +1,262 @@
+.tstyle1
+{
+	font-family: "Roboto";
+	font-size: 30px;
+	font-weight:lighter;
+}
+.tstyle2
+{
+	font-family: "Roboto";
+	font-weight:lighter;
+	font-size: 20px;
+	
+}
+.tstyle3
+{
+	font-family: "Roboto";
+	font-weight:lighter;
+	font-size: 18px;
+}
+.tstyle4
+{
+	font-family: "Roboto";
+	font-size: 12px;
+}
+#workheader
+{
+	position: relative;
+	text-align: center;
+	padding: 8px 20px 5px 20px;
+	border-bottom:1px #c8c8c8 solid;
+	color:#72b8dc;
+}
+#workspace
+{
+	position: relative;
+	padding:10px 20px 10px 20px;		
+}
+#footer
+{
+	padding:20px;
+	//width:100%;
+	height: 30px;
+	border-top: 1px #c8c8c8 solid;
+	background-image: url('../img/graystripe.png');
+	//background-color: red;
+}
+#notification
+{
+	text-align: center;
+	color:white;
+	width:100%;
+	height:20px;
+	padding:10px;
+	margin: auto;
+	position: fixed;	
+	background-color: #6A6A6A;
+	border:1px #c8c8c8 solid;
+	//border-bottom-right-radius: 10px;
+	//border-bottom-left-radius: 10px;
+	display: none;
+	top:0px;
+	left:0px;	
+}
+.posbutton
+{
+	height:27px;
+	padding: 0 8px;
+	font-size: 18px;
+	font-weight: lighter;
+	font-family: "Roboto";
+	border-radius: 3px;
+	border-style: hidden;	
+	background-color: #72b8dc;	
+	color:white;
+}
+.negbutton
+{
+	height:27px;
+	padding: 0 8px;
+	font-size: 18px;
+	font-weight: lighter;
+	font-family: "Roboto";
+	border-radius: 3px;
+	border-style: hidden;	
+	background-color: #e1912a;	
+	color:white;
+}
+.posbutton:hover
+{
+	background-color: #82c0e0;
+}
+.negbutton:hover
+{
+	background-color: #e1b02a
+}
+.posbutton:active,.negbutton:active
+{
+	box-shadow: inset 0 2px 9px  rgba(00,00,00,0.5);
+}
+#working
+{
+	display: none;
+    text-align: center;    
+    position: fixed;
+    left:25px;
+    bottom: 25px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #6A6A6A;
+    opacity: 0.75;
+    color:#ededed;
+}
+.warning
+{
+	max-width: 400px;
+	background-color: #e1912a;
+	padding:5px;
+	border-radius: 5px;
+}
+td
+{
+	border-bottom:1px #c8c8c8 solid;
+}
+tr.middletr td
+{
+	border-bottom: 0px;
+}
+table input,table select,table textarea,input
+{
+	border: 1px #c8c8c8 solid;
+}
+
+table input:hover,table select:hover,table textarea:hover,input:hover
+{
+	border: 1px grey solid;
+}
+input[type="text"]
+{
+	width:250px;
+}
+input[type="file"]
+{
+	border: none;
+}
+table input:focus,table select:focus,table textarea:focus,input:focus
+{
+	border-color:blue;
+	//background-color: #ebebeb;
+	box-shadow: none;
+}
+.infotd
+{
+	width:30%;
+	text-align: center;
+	vertical-align: top;
+	margin: 0px 3px 0px 3px;
+}
+.inptd
+{
+	vertical-align: top;
+	width:65%;
+	text-align: left;
+}
+.badgetd
+{
+	vertical-align: top;
+}
+.badge 
+{
+    
+    background-color: #72b8dc;
+    border-radius: 50%; /* one half of ( (border * 2) + height + padding ) */
+  
+    color: white;
+    padding: 10px;
+    height: 25px; 
+    width: 25px;
+    text-align: center;
+}
+.table 
+{
+	//border: 1px #c8c8c8 solid;
+	//background-color: #f8f8f8;
+	border-collapse: collapse;
+	//border-bottom: 1px #c8c8c8 solid;
+}
+a
+{
+	color:black;
+	text-decoration: underline;
+}
+a:active
+{
+	background-color: #c8c8c8;
+}
+a:hover
+{
+	cursor: pointer;
+	background-color: #72b8dc;
+}
+#overlay
+{
+	background-color:rgba(0,0,0,0.5);
+	
+	position: fixed;
+	width:100%;
+	height: 100%;
+	left:0px;
+	top:0px;
+}
+#dialog
+{
+	position: relative;
+	
+	display: block;
+	margin-top:0px;
+	top:0px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px #c8c8c8 solid;
+	border-top:5px #72b8dc solid;
+	border-radius: 5px;
+	background-color: white;
+	width:500px;
+}
+#dialog #workspace
+{	
+	padding-left: 30px;
+	max-height: 300px;
+	overflow: auto;	
+}
+#noofpoints
+{
+	height: 70px;
+	padding:5px;
+	float:left;
+    
+	width:20%;
+	background-color: #ebebeb;
+	border:1px #c8c8c8 solid;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+}
+#picpatttext
+{
+	
+	padding:5px;
+	border:1px #c8c8c8 solid;
+	border-left:none;
+	height: 70px;
+	width:76%;
+	
+	float:left;
+    padding-left: 5px;
+	background-color: #ebebeb;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+}
+#cnv
+{
+	outline:5px #c8c8c8 solid;
+}
